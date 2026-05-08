@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE Bienes[
+   <!ELEMENT Bienes (Producto|Servicio)*>
+   <!ELEMENT Producto (Descripcion?, Componentes?,Recomendaciones?)>
+   <!ELEMENT Componentes (Componente+)>
+   <!ELEMENT Descripcion (#PCDATA)>
+   <!ELEMENT Componente (#PCDATA)>
+   <!ELEMENT Servicio (Insumos, Recomendaciones?)>
+   <!ELEMENT Insumos (Insumo)+>
+   <!ELEMENT Insumo EMPTY>
+   <!ELEMENT Recomendaciones (#PCDATA)>   
+   <!ATTLIST Producto codigo ID #REQUIRED>
+   <!ATTLIST Producto nombre CDATA #REQUIRED> 
+   <!ATTLIST Producto precioVenta CDATA #IMPLIED>
+   <!ATTLIST Producto existencias CDATA #IMPLIED>
+   <!ATTLIST Producto precioCompra CDATA #IMPLIED>
+   <!ATTLIST Servicio codigo ID #REQUIRED>
+   <!ATTLIST Servicio nombre CDATA #REQUIRED>
+   <!ATTLIST Servicio precioVenta CDATA #IMPLIED>
+   <!ATTLIST Servicio manoObra CDATA #IMPLIED>
+   <!ATTLIST Insumo producto IDREF #REQUIRED>
+   <!ATTLIST Insumo unidades CDATA #IMPLIED>
+]>
